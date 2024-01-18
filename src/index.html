@@ -7,42 +7,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">  
+    <style>
+        .background{
+            background-image: url('img/Bg.png');
+        }
+    </style>
 </head>
 
-<body class="font-[Roboto] h-screen flex">
-    
-        <div class="container min-h-screen bg-[url('img/Bg.png')] bg-center bg-cover">
-            <nav class="flex justify-between items-start w-[92%] mx-auto ">  
-                <img class="w-14" src="/src/img/Logo.png" alt="Logo">
-                    <div class="absolute min-h-[60vh] left-150 top-[10%] w-full flex px-10 py-2 ">
-                        <ul class="flex md:flex-row flex-col gap-[3vw]">
+    <body class="">
+            <div class="container min-h-screen background bg-center bg-cover px-36 py-10">
+                <nav class="flex items-start"> 
+                    <ul class="flex-1 text-left">
+                                <li class="list-none inline-block">
+                                    <a class="">
+                                        <img class="w-16" src="/src/img/Logo.png">
+                                    </a> 
+                                </li>
+                                <li class="list-none inline-block px-5 ">
+                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">Products</a>
+                                </li>
+                                <li class="list-none inline-block px-5 ">
+                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">About Us</a>
+                                </li>
+                                <li class="list-none inline-block px-5 " >
+                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">Contacts</a>
+                                </li>
+                                <li class="list-none inline-block px-5">
+                                    <button class="text-teal-400 flex">
+                                        <a class="no-underline px-2 hover:text-teal-700 duration-200" href="#">Sign In</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"  stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        
+                        <div class="absolute text-teal-400 mt-80">
+                            <h1 class="text-6xl font-semibold leading-normal">When running or walking<br></h1>
+                            <h2 class="text-3xl">comfort is what matters.</h2>
+                            
+                            <button class="mt-10">
+                                <a class="text-white bg-teal-400 rounded-3xl px-8 py-3 font-medium inline-block mr-4 hover:bg-transparent hover:text-teal-600 hover:border-teal-700 duration-300 hover:border">See products</a>
+                            </button>
+                        </div>
+                </nav>
+            </div>
 
-                            <li>
-                                <a class="text-sky-600 hover: text-gray-500" href="#">Products</a>
-                            </li>
-                            <li>
-                                <a class="text-sky-600 hover: text-gray-500" href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a class="text-sky-600 hover: text-gray-500" href="#">Contacts</a>
-                            </li>
-                        </ul>
-                </div>
-
-                <div class="absolute right-10 top-[10%]">
-                    <button class="text-sky-600 px-5 py-5">Sign In</button>
-                </div>
-            </nav>
-        </div>
-
-    <div class="absolute bottom-20 left-10 mx-auto">
-        <h2 class="text-sky-600 text-3xl">When running or walking</h2>
-        <h1 class="text-sky-600 text-6xl">comfort is what matters.</h1>
-        
-        <button class="text-white">
-            <a>See products</a>
-        </button>
-    </div>
-
-</body>
+    </body>
 </html>
