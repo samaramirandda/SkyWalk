@@ -1,57 +1,236 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">  
-    <style>
-        .background{
-            background-image: url('img/Bg.png');
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./output.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">  
+        <style>
+            .background{
+                background-image: url('img/Bg.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment:fixed;;
+                background-size: cover;
+            }
+        
+            .interface.rolagem{
+                background-color: white;
+            }
+        </style>
 
-    <body class="">
-            <div class="container min-h-screen background bg-center bg-cover px-36 py-10">
-                <nav class="flex items-start"> 
-                    <ul class="flex-1 text-left">
-                                <li class="list-none inline-block">
-                                    <a class="">
-                                        <img class="w-16" src="/src/img/Logo.png">
-                                    </a> 
-                                </li>
-                                <li class="list-none inline-block px-5 ">
-                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">Products</a>
-                                </li>
-                                <li class="list-none inline-block px-5 ">
-                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">About Us</a>
-                                </li>
-                                <li class="list-none inline-block px-5 " >
-                                    <a class="text-teal-400 no-underline px-2 hover:text-teal-700 duration-200" href="#">Contacts</a>
-                                </li>
-                                <li class="list-none inline-block px-5">
+        <script>
+
+        </script>
+    </head>
+
+    <body class="background">
+        <nav> 
+            <div id="navbar" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px8 fixed">
+                <div class="flex justify-between items-start h-16">
+                    <div id="logo" class="flex items-center">
+                        <a href="#" class="flex shrink-0">
+                            <img class="size-36 rounded-full animate-pulse " src="/src/img/Logo.png">    
+                        </a>
+
+                        <div id="menu" class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4 text-teal-400">
+                                <a href="#products" class=" hover:text-teal-800 px-3 py-1 transition duration-300 ease-in-out">Products</a>
+                                <a href="#about" class=" hover:text-teal-800 px-3 py-1 transition duration-300 ease-in-out">About</a>
+                                <a href="#contacts" class=" hover:text-teal-800 px-3 py-1 transition duration-300 ease-in-out">Contacts</a>
+                                <a href="#login" class="hover:text-teal-800 px-3 py-1 transition duration-300 ease-in-out">
                                     <button class="text-teal-400 flex">
-                                        <a class="no-underline px-2 hover:text-teal-700 duration-200" href="#">Sign In</a>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"  stroke="currentColor" class="w-6 h-6">
+                                        Sign In
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"  stroke="currentColor" class="ml-1 mt-0.5 w-6 h-6 animate-pulse">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                                         </svg>
                                     </button>
-                                </li>
-                            </ul>
-                        
-                        <div class="absolute text-teal-400 mt-80">
-                            <h1 class="text-6xl font-semibold leading-normal">When running or walking<br></h1>
-                            <h2 class="text-3xl">comfort is what matters.</h2>
-                            
-                            <button class="mt-10">
-                                <a class="text-white bg-teal-400 rounded-3xl px-8 py-3 font-medium inline-block mr-4 hover:bg-transparent hover:text-teal-600 hover:border-teal-700 duration-300 hover:border">See products</a>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="-mr-2 flex md:hidden ">
+                            <button id="menuButton" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-teal-400 hover:text-white hover:bg-gray-500 focus:outline-none focus:bg-gray-500 focus:text-white transition duration-300 ease-in-out" aria-label="Menu" aria-expanded="false">
+                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
                             </button>
                         </div>
-                </nav>
+                    </div>
+                </div>
             </div>
+        </nav>
+
+
+        <div id="header" class="flex-row container text-teal-400 py-96 px-36">
+            <h1 class="text-6xl font-semibold leading-normal">When running or walking<br></h1>
+            <h2 class="text-3xl">comfort is what matters.</h2>
+            
+            <button class="mt-10">
+                <a class="text-white bg-teal-400 rounded-3xl px-8 py-3 font-medium inline-block mr-4 hover:bg-transparent hover:text-teal-600 hover:border-teal-700 duration-300 hover:border" href="#products">See products</a>
+            </button>
+        </div>
+        
+
+            <div id="products" class="bg-white">
+                <div class="mx-auto min-h-screen px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                    <h2 class="text-4xl font-bold tracking-tight text-teal-400">Features</h2>
+            
+                    <div id="column1" class="mt-6 grid grid-cols-4 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        
+                        <div class="group relative">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                                <img src="img/products/air-max-pulse-shoes-XfWhvL.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <div>
+                                    <h3 class="text-sm text-gray-700">
+                                        <a href="#">
+                                            <span aria-hidden="true" class="absolute inset-0"></span> 
+                                            Nike Air Max Pulse Men's Shoes
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                </div>
+                                <p class="text-sm font-medium text-gray-900">$35</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                                <img src="img/products/revolution-7-road-running-shoes-WjdXFH.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <div>
+                                    <h3 class="text-sm text-gray-700">
+                                        <a href="#">
+                                            <span aria-hidden="true" class="absolute inset-0"></span> 
+                                            Revolution 7 Road Running Shoes
+                                        </a> 
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                </div>
+                                <p class="text-sm font-medium text-gray-900">$35</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                                <img src="img/products/impact-4-basketball-shoes-bwLwnb.jpeg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <div>
+                                    <h3 class="text-sm text-gray-700">
+                                        <a href="#">
+                                            <span aria-hidden="true" class="absolute inset-0"></span> 
+                                            Impact 4 Basketball Shoes
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                </div>
+                                <p class="text-sm font-medium text-gray-900">$35</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                                <img src="img/products/dunk-low-retro-shoe-VMwkPQ.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <div>
+                                    <h3 class="text-sm text-gray-700">
+                                        <a href="#">
+                                            <span aria-hidden="true" class="absolute inset-0"></span> 
+                                            Dunk Low Retro Shoes
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                </div>
+                                <p class="text-sm font-medium text-gray-900">$35</p>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div id="column2" class="mt-6 grid grid-cols-4 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    
+                    <div class="group relative">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="img/products/air-max-270-shoes-KkLcGR.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span> 
+                                        Air Max 270 Shoes
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="img/products/air-max-90-futura-shoes-nfmGzj.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span> 
+                                        Air Max 90 Futura Shoes
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="img/products/air-max-plus-shoes-pFKxz0.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span> 
+                                        Air Max Plus Shoes
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <img src="img/products/sb-react-leo-skate-shoes-8HRcHX.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span> 
+                                        Nike SB React Leo Skate Shoes
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900">$35</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </body>
 </html>
